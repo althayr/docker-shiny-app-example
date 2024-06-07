@@ -1,0 +1,8 @@
+version: "3.3"
+services:
+  shiny-app:
+    build: ./
+    image: toy-shiny-app
+    command: "Rscript /srv/shiny-server/app.R"
+    ports:
+      - "9000:3838"
